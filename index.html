@@ -1,33 +1,21 @@
-<!DOCTYPE html>
 <html>
+<head>
+<link href="style.css" rel="stylesheet" />
+<meta charset=utf-8 />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="cytoscape.min.js"></script>
+<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.min.js"></script>
+<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cose-bilkent/1.6.5/cytoscape-cose-bilkent.js"></script>
+  <script src="retagElements.js"></script>
+</head>
 <body>
 
-<h1>JavaScript Can Validate Input</h1>
-
-<p>Please input a number between 1 and 10:</p>
-
-<input id="numb">
-
-<button type="button" onclick="myFunction()">Submit</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-    var x, text;
-
-    // Get the value of the input field with id="numb"
-    x = document.getElementById("numb").value;
-
-    // If x is Not a Number or less than one or greater than 10
-    if (isNaN(x) || x < 1 || x > 10) {
-        text = "Input not valid";
-    } else {
-        text = "Input OK";
-    }
- document.getElementById("demo").innerHTML = text;
-}
-</script>
-
+<div id="search-wrapper">
+    <input type="text" class="form-control" id="search" placeholder="Search">
+    <input type="button" onclick="dd();" id="start" value="search" />
+  </div>
+  <div id="cy"></div>
+  <script src="code.js"></script>
 </body>
 </html>
